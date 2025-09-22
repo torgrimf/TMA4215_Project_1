@@ -12,4 +12,6 @@ dependencies = [
     "ipykernel",
     "numba",
     "autograd>=1.8.0",
+    "pandas",
+    "scienceplots>=2.1.1",
 ]
