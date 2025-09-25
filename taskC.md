@@ -1,3 +1,7 @@
 In $b)$ we needed approximately degree $n=20$ to reach a minimal error, and in the case of equidistant nodes, we did not even reach machine precision as we did for Chebyshev nodes. Using this method however, we are able to reach errors less than $10^{-14}$ using only polynomials of degree 6 and more, at least from our figure with $K$ only going to $200$. It seems reasonable to think that they all converge, regardless of degree if we just increase the number of subintervals.
 
-Increasing $K$ too much does increase computational cost and time by quite a lot, so it is not desirable to use this method for too many subintervals. We see however from the figure that some of the degrees reach machine precision with $K \le50$, and for this few subintervals, the difference in speed is negligible compared to normal interpolation.
+Increasing $K$ too much does increase computational cost and time by quite a lot, so it is not desirable to use this method for too many subintervals. 
+
+The second plot shows that indeed for ~$10$ discretization points, both equidistant and Chebyshev with normal interpolation (on one subinterval) the error is much smaller than for all the degrees on piecewise interpolation. So for small enough $n$ it is desirable to use normal interpolation (denote "normal" for one subinterval). Note however that the normal equidistant interpolation is very unstable for larger $n$, and we can even see that normal Chebyshev interpolation is unstable for large enough $n$ (~$100$).
+
+The advantages of piecewise-polynomial interpolation only begins to show at around $n=100$, since the error stays stable at around machine precision, while the normal interpolation with Chebyshev nodes increases.
