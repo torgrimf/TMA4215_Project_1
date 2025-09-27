@@ -20,8 +20,8 @@ So if $p_n$ is then exactly the $q$ that minimizes the 2-norm of the error, then
 
 *For the second question.*
 
-Seeking coefficients $c_{0},...,c_n$ such that 
+Seeking coefficients $c_{0},...,c_n$ to minimize the 2-norm of the error such that 
 $$
 p_n(x) = c_{0}+c_{1}x+...+ c_nx^{n}
 $$
-and $p_n(x_i)=f(x_i)$ to minimize the 2-norm of the error leads to a linear system $Mc=b$ to be solved. Here $M$ is $(n+1)\times(n+1)$ and $M_{jk}=\left<	x^{k},\,x^{j}  \right>$.
+leads to a linear system $Mc=b$ to be solved. Here $M$ is $(n+1)\times(n+1)$ and $M_{jk}=\left<	x^{k},\,x^{j}  \right>$, $b_j = \left<	f,\,x^{j}  \right>$. This matrix is ill conditioned and becomes unpractical to solve as $n$ increases. A better method would be to seek a diagonal matrix, namely by constructing an orthogonal basis. In this case that would be the Legendre polynomials.
